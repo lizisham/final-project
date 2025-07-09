@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #875f4e;
 }
 
 li {
@@ -24,41 +24,91 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #c7601c;
 }
 .active {
-  background-color: #044c31;
+  background-color: #4c2e04;
+}
+
+#slider {
+position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; /* adjust as needed */
+  margin: auto;
+}
+
+#slider figure {
+  position: relative;
+  width: calc(100% * 3); /* number of slides */
+  margin: 0;
+  left: 0;
+  animation: slide 10s infinite;
+}
+
+#slider figure img {
+  width: calc(100% / 3); /* same slide count */
+  float: left;
+   background  : rgba(139, 69, 19, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+/* keyframes based on 3 slides */
+@keyframes slide {
+  0%, 20%    { left: 0; }
+  25%, 45%   { left: -100%; }
+  50%, 70%   { left: -200%; }
+  75%, 95%   { left: -100%; }
+  100%       { left: 0; }
+}
+
+/* Pause on hover */
+#slider:hover figure {
+  animation-play-state: paused;
+  opacity: 0.9;
 }
 .navigacia{
  width: 100%;
  height: 600px;
- background-image: url(../images/tbilisi-city-guide-roofs.avif); 
- background-size: cover;     
-  background-position: center;          
-  background-repeat: no-repeat;   
+ position: relative;
  display: flex;
  align-items: flex-start;
  margin: 24px 78px 18px 99px ;
- justify-content: space-between;
+ justify-content: space-between; 
+ background-color: #4c2e04;
+ opacity: 0.8;
 
 }
 header p{
-    color: #aed2ce;
-    font-size: 30px;
+    color: #e7ab74;
+     font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-style: oblique;
+  display: inline;
     font-weight: 200;
-    order: -0.6;
+    margin-left: 15px;
+    position: relative;
     
 }
-nav  {
+.navigacia > p{
+    position: relative;
+    z-index: 2;
+}
+
+.navigacia nav  {
  display: flex;
+ position: relative;
  gap: 52px;
-  background-color:#1a0233;
+ background-color:#1a0233;
  opacity: 0.8;
 }
 nav ul{ 
  font-size: 16px;
- color: #636060;
+ color: #c78655;
 }
+
 .poster div{
   width: 100% ;
   height: 606px;
